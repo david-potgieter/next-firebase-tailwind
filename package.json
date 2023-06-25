@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "get-started": "yarn && yarn --cwd functions && yarn",
+    "predev:func": "yarn --cwd ./functions build",
+    "dev:func": "yarn --cwd ./functions dev",
+    "predev:em": "npx kill-port --port  9099,5001,8080,5000,8081,9199,9299",
+    "dev:em": "firebase emulators:start --only  auth,functions,firestore,pubsub,storage,eventarc"
   },
   "dependencies": {
     "@types/node": "20.3.1",
