@@ -3,12 +3,12 @@ import { getStorage } from 'firebase-admin/storage'
 
 const app = initializeApp({
   credential: cert({
-    projectId: process.env.FIREBASE_PROJECT_ID,
-    clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
-    privateKey: process.env.FIREBASE_PRIVATE_KEY,
+    projectId: process.env.FUNC_FIREBASE_PROJECT_ID,
+    clientEmail: process.env.FUNC_FIREBASE_PRIVATE_KEY,
+    privateKey: process.env.FUNC_FIREBASE_CLIENT_EMAIL,
   }),
-  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-  databaseURL: process.env.FIREBASE_DATABASE_URL,
+  storageBucket: process.env.FUNC_FIREBASE_DATABASE_URL,
+  databaseURL: process.env.FUNC_FIREBASE_STORAGE_BUCKET,
 })
 
 const bucket = getStorage().bucket()
