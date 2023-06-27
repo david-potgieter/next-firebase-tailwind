@@ -10,4 +10,4 @@ node_modules/
 
 # Service account key
 service-account.json
-.env
+.env*.local
